@@ -1,0 +1,16 @@
+joblib
+matplotlib
+monai
+nibabel
+nilearn
+numpy
+optuna
+pandas
+ptitprince
+scikit-learn
+scipy
+seaborn
+statsmodels
+torch
+torchvision
+tqdm

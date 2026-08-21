@@ -1,0 +1,18 @@
+name: dti_ad_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.8  # 根据服务器实际驱动版本调整
+  - pandas
+  - nibabel
+  - matplotlib
+  - seaborn
+  - tqdm
+  - pip
+  - pip:
+    - scipy
