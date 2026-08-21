@@ -30,27 +30,15 @@ DCP/
 ├── configs/config.py                # Central configuration (paths, hyperparameters)
 ├── train_engine.py                  # Main training loop
 ├── run_optuna.py                    # Optuna hyperparameter optimization
-├── models/
-│   └── resnet18.py                  # 3D ResNet-18 VAE (encoder + decoder)
+├── models/resnet18.py               # 3D ResNet-18 VAE (encoder + decoder)
 ├── losses/loss.py                   # Composite loss function
 ├── datasets/
 │   ├── dataset.py                   # DTI dataset and dynamic sampler
-│   └── regression/
-│       └── nilearn_regression.py    # Normative residualization (nilearn)
+│   └── regression/nilearn_regression.py   # Normative residualization (nilearn)
 ├── predict_analysis/
 │   ├── predict_model.py             # Inference / prediction
 │   ├── evaluate_all_metrics.py      # Multi-dimensional evaluation
-│   └── plot/
-│       ├── exp_correlation.py       # Clinical score correlation (per fold)
-│       ├── exp_correlation_merge.py # Clinical score correlation (merged folds)
-│       ├── exp_v0_analysis.py       # Baseline V0 statistical analysis (per fold)
-│       ├── exp_v0_analysis_merge.py # Baseline V0 analysis (merged folds)
-│       ├── exp_ambiguity_analysis.py        # Position ambiguity (sigma) analysis
-│       ├── exp_longitudinal_analysis.py     # Longitudinal trajectory (per fold)
-│       ├── exp_longitudinal_analysis_merge.py
-│       ├── exp_conversion_analysis.py       # Conversion prediction (per fold)
-│       ├── exp_conversion_analysis_merge.py
-│       └── exp_conversion_roc.py            # Conversion ROC curves
+│   └── plot/                        # Figure & analysis scripts (correlation, V0, longitudinal, conversion, ROC)
 ├── submit_resnet.sh                 # SLURM submission script
 ├── submit_regression.sh             # SLURM script for residualization
 └── requirements.txt
