@@ -1,0 +1,43 @@
+# Data files
+*.nii
+*.nii.gz
+*.npy
+*.npz
+*.mat
+*.pkl
+*.csv
+*.csv.bak
+*.xlsx
+*.xls
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.bin
+
+# Outputs
+outputs/
+results/
+logs/
+
+# Databases
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.egg-info/
