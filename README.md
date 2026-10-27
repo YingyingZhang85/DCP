@@ -30,17 +30,23 @@ DCP/
 ├── configs/config.py                # Central configuration (paths, hyperparameters)
 ├── train_engine.py                  # Main training loop
 ├── run_optuna.py                    # Optuna hyperparameter optimization
-├── models/resnet18.py               # 3D ResNet-18 VAE (encoder + decoder)
+├── models/
+│   └── resnet18.py                  # 3D ResNet-18 VAE (encoder + decoder)
 ├── losses/loss.py                   # Composite loss function
 ├── datasets/
 │   ├── dataset.py                   # DTI dataset and dynamic sampler
-│   └── regression/nilearn_regression.py   # Normative residualization (nilearn)
+│   ├── atlas/                       # FreeSurfer atlas for ROI ablation
+│   └── regression/
+│       └── nilearn_regression.py    # Normative residualization (nilearn)
 ├── predict_analysis/
 │   ├── predict_model.py             # Inference / prediction
 │   ├── evaluate_all_metrics.py      # Multi-dimensional evaluation
-│   └── plot/                        # Figure & analysis scripts (correlation, V0, longitudinal, conversion, ROC)
+│   ├── volume_correlation.py        # Brain region volume correlation
+│   ├── roi_ablation_adni.py         # ROI ablation with permutation test
+│   └── plot/                        # Visualization scripts (correlation, trajectory, conversion, etc.)
 ├── submit_resnet.sh                 # SLURM submission script
 ├── submit_regression.sh             # SLURM script for residualization
+├── submit_roi_ablation.sh           # SLURM script for ROI ablation
 └── requirements.txt
 ```
 
