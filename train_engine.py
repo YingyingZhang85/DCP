@@ -391,7 +391,7 @@ def run_training(trial=None):
             torch.cat(all_val_subj_ids)
         )
 
-        composite_score = cfg.CROSS_C_RATIO * metrics['cross_c'] + cfg.LONG_C_RATIO * metrics['long_c'] + cfg.AUC_12_RATIO * metrics['auc_12'] + cfg.AUC_23_RATIO * metrics['auc_23']
+        composite_score = cfg.CROSS_C_RATIO * metrics['cross_c'] + cfg.LONG_C_RATIO * metrics['long_c']
 
         current_lr = optimizer.param_groups[0]['lr']
         epoch_time = time.time() - start_time
